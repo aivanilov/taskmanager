@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Message</title>
+</head>
+<body>
+<h1>Message</h1>
+
+<div th:if="${errorMessage}">
+  <p th:text="${errorMessage}" class="error-message"></p>
+</div>
+
+<div th:if="${successMessage}">
+  <p th:text="${successMessage}" class="success-message"></p>
+</div>
+
+<button onclick="window.location.href ='/'" class="btn">Back to the main page</button>
+</body>
+</html>

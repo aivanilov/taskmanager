@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Task Editor</title>
+</head>
+<body>
+<h1>Task Editor</h1>
+
+<form th:object="${task}" th:action="@{/tasks/edit}" method="post">
+  <div>
+    <label>Task ID:</label>
+    <input type="text" name="id" th:value="${task.id}" readonly="readonly"/>
+  </div>
+  <div>
+    <label>Task Description:</label>
+    <input type="text" name="description" th:value="${task.description}"/>
+  </div>
+  <div>
+    <label>Task Status:</label>
+    <select th:value="${task.status}" name="status">
+      <option value="IN_PROGRESS">In Progress</option>
+      <option value="PAUSED">Paused</option>
+      <option value="DONE">Done</option>
+    </select>
+  </div>
+  <div>
+    <input type="submit" value="Save" />
+  </div>
+</form>
+</body>
+</html>

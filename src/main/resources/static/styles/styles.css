@@ -1,0 +1,26 @@
+table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: 2px solid white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}

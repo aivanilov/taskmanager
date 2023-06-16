@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  app:
+    image: app
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      MYSQL_HOST: mysql-db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: mysql
+      MYSQL_PORT: 3306
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: todo
+      MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - "3307:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=mysql --execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 30s
+      retries: 10
+
+volumes:
+  my-db:
+

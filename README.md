@@ -1,5 +1,4 @@
 TaskManager на Spring MVC. Выполнено в образовательных целях для курса JavaRush University.
 
-Как запустить:
-1. Актуализировать параметры БД в application.properties 
-2. Запустить TaskManagerApp 
+**Как запустить?** 
+Запустить TaskManagerApp. К проекту подключен spring-boot-docker-compose, который поднимает образы приложения и БД. 

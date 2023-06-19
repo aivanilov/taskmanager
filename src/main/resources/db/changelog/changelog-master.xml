@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="alexanderivanilov@gmail.com" context="example-context">
+        <createTable tableName="task">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="description" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="alexanderivanilov@gmail.com">
+        <insert tableName="task">
+            <column name="description">Buy groceries</column>
+            <column name="status">0</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Pay bills</column>
+            <column name="status">1</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Schedule a doctor's appointment</column>
+            <column name="status">2</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Clean the house</column>
+            <column name="status">2</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Complete a work project</column>
+            <column name="status">2</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Call a friend or family member</column>
+            <column name="status">0</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Organize the closet</column>
+            <column name="status">0</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Go for a jog or exercise</column>
+            <column name="status">2</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Read a book or watch a movie</column>
+            <column name="status">1</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Research vacation destinations</column>
+            <column name="status">2</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Start a new hobby or learn a new skill</column>
+            <column name="status">0</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Update your resume</column>
+            <column name="status">1</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Plan a dinner party or get-together</column>
+            <column name="status">0</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Do laundry</column>
+            <column name="status">0</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Write in a journal or start a blog</column>
+            <column name="status">1</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Take care of any pending paperwork or documents</column>
+            <column name="status">1</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Volunteer for a local charity or organization</column>
+            <column name="status">2</column>
+        </insert>
+        <insert tableName="task">
+            <column name="description">Take some time for self-care and relaxation</column>
+            <column name="status">0</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

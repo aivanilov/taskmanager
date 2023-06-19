@@ -1,4 +1,4 @@
-FROM tomcat
-MAINTAINER javarush.com
-COPY /target/taskmanager-1.0.jar /usr/local/tomcat/webapps
-
+FROM openjdk:17-oracle
+COPY target/taskmanager.jar /app/taskmanager.jar
+WORKDIR /app
+CMD ["java", "-jar", "taskmanager.jar"]

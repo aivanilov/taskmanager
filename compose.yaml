@@ -3,7 +3,6 @@ version: '3.9'
 services:
   web:
     build: .
-    restart: on-failure
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/todo?createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
@@ -11,6 +10,7 @@ services:
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
     depends_on:
       - db
+    restart: on-failure
 
   db:
     image: mysql:8.0.32
